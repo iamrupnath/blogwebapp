@@ -3,7 +3,7 @@ import bcryptjs from 'bcryptjs';
 
 
 
-export const signup = async (req, res) => {
+export const signup = async (req, res, next) => {
     const { username, email, password } = req.body;
 
     if (
@@ -22,7 +22,7 @@ const hashedPassword = bcryptjs.hashSync(password, 10);
         await newUser.save();
         res.json('Signup successful');
       } catch (error) {
-        res.status(500).json({message:error.message});
+        next(error);
       }
 
 }  
