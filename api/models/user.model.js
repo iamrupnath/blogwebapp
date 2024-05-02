@@ -21,6 +21,7 @@ const userSchema = new mongoose.Schema(
       default:
         'https://i.pinimg.com/564x/de/6e/8d/de6e8d53598eecfb6a2d86919b267791.jpg',
     },
+    
     isAdmin: {
       type: Boolean,
       default: false,
