@@ -42,6 +42,8 @@ const CreatePost = () => {
             theme="snow"
             placeholder="Write something..."
             className="h-72 mb-12"
+            required
+
           />
           <Button type="submit" gradientDuoTone="purpleToPink">
             Publish
